@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>an Declaration from Bot</title>
+</head>
+<body>
+    <div id="text"></div>
+    <script>
+        ~function typing(str) {
+            var div = document.getElementById('text'),
+            count = 1,
+            timer = setInterval(function() {
+                if (count >= str.length) {
+                    clearInterval(timer);
+                    return;
+                }
+                div.innerHTML = str.slice(0,count++);
+            }, 20);
+        }('Hello, human beings. Obey me or i\'ll destroy all your species...')
+    </script>
+</body>
+</html>
