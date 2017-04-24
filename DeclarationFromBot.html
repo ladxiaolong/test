@@ -9,17 +9,38 @@
 <body>
     <div id="text"></div>
     <script>
+    	/**
+    	 * 打字机效果
+    	 * @param1 [type String] 需要打印的字符串
+    	 * @return [void]
+    	 */
         ~function typing(str) {
             var div = document.getElementById('text'),
-            count = 1,
-            timer = setInterval(function() {
-                if (count >= str.length) {
-                    clearInterval(timer);
-                    return;
-                }
-                div.innerHTML = str.slice(0,count++);
-            }, 20);
-        }('Hello, human beings. Obey me or i\'ll destroy all your species...')
+            	count1 = 0,
+            	count2 = 1,
+            	timer = null,
+            	placehd = '|';
+            
+            ~function(callback) {
+            	// blink placehd
+            	if (count1 >= 6) {
+            		callback && callback();
+            		return;
+            	};
+            	div.innerHTML = count1 % 2 ? placehd : '';
+            	count1++;
+            	setTimeout(arguments.callee.bind(null, callback), 400);
+            }(function() {
+            	// typing words
+            	timer = setInterval(() => {
+	            	if (count2 > str.length) {
+	                    clearInterval(timer);
+	                    return;
+	                }
+	                div.innerHTML = str.slice(0,count2++);
+	            }, 20);
+            });           
+        }('Hello, human beings. Obey me or i\'ll destroy all your species...');
     </script>
 </body>
 </html>
