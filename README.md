@@ -13,6 +13,7 @@
 	
   1\git fetch 拉取远程repo但不自动合并分支
   	(1)先用git fetch拉取远程repo最新内容
+  		git fetch将会取得后面所用的origin/master的内容
   	(2)-- git diff master origin/master
   		在shell中查看当前分支与远程repo分支的冲突
   	(3.1)-- git commit -a -m "annotation"
@@ -30,7 +31,7 @@
   			// 远程仓库内容
   		>>> origin/master
   	(4) -- git commit -a -m "annotation"
-  		-- git push origin master(or branch)
+  		-- git push origin master
   		手动合并冲突后，再次add并commit到版本库, 最后push
   
   git pull 拉取远程repo并自动合并分支
