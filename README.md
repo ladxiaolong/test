@@ -11,9 +11,9 @@
 
 * [git] git fetch | git pull
 	
-  1\git fetch 拉取远程repo但不自动合并分支
+  1\git fetch 拉取远程repo但不自动合并分支  
   	(1)先用git fetch拉取远程repo最新内容  
-  		git fetch将会取得后面所用的origin/master的内容
+  		git fetch将会取得后面所用的origin/master的内容  
   	(2)-- git diff master origin/master  
   		在shell中查看当前分支与远程repo分支的冲突  
   	(3.1)-- git commit -a -m "annotation"  
