@@ -24,3 +24,4 @@
   hint: (e.g., 'git pull ...') before pushing again.
 	
 	当远程repo已经更新， 而本地没有拉取合并新内容， 本地无法直接git push
+
